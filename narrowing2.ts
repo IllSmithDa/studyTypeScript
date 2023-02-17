@@ -106,20 +106,6 @@ function getTrueShape(shape: Shape) {
   return shape.side * shape.side;
 }
 
-type NewShape = Circle | Square | Rectangle; 
 
-function getArea(shape: NewShape) {
-  switch(shape.kind) {
-    case 'circle':
-      return Math.PI * shape.radius **2;
-    case "square":
-      return shape.side * shape.side
-    case "rectangle":
-      return shape.length * shape.width
-    default: 
-      const _defaultShape: never = shape
-      return _defaultShape;
-  }
-}
 
 export {};

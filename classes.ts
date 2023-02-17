@@ -147,16 +147,19 @@ class Youtube implements TakePhoto {
   // you can initialize them here
   cameraMode: string;
   burstMode = 22;
+  youtubeId = 23;
   constructor(public filter: string, public short: string) {
 
   }
 }
 
 // inheriting method from story and the var from interface TakePhoto
-class Stories implements TakePhoto, Story {
+// note that you must include properties from the extended classes and interfaces in a class  or else you will get an error
+class Stories implements TakePhoto, Story, Youtube {
   // you can initialize them here
   cameraMode: string;
   burstMode = 22;
+  youtubeId = 323;
   createStory = () => 'story'
   constructor(public filter: string, public short: string) {
 

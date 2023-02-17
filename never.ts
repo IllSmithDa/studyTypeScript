@@ -17,18 +17,8 @@ interface Rectangle {
   width: number,
 }
 
-type Shape = Circle | Square;
-
-function getTrueShape(shape: Shape) {
-  if(shape.kind === 'circle') {
-    return Math.PI * shape.radius ** 2;
-  }
-  return shape.side * shape.side;
-}
-
-
 /* 
-  Notice how the never check in teh default case scenario will fail when you don't cover all your 
+  Notice how the never check in the default case scenario will fail when you don't cover all your 
   bases. This is a good thing because if don't include the never check, the switch statements alone
   won't exhaustively check for all possible type cases. The idea is that when you cover all your 
   types, the never line of code will never be reached and thus filfull the never condition 
@@ -50,8 +40,8 @@ function getArea(shape: NewShape) {
   }
 }
 
-// error goes away once we account for rectangle and so we should include this never type 
-// when using switch statements
+/* error goes away once we account for rectangle and so we should include this never type 
+  when using switch statements */
 function getArea2(shape: NewShape) {
   switch(shape.kind) {
     case 'circle':

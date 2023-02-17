@@ -1,6 +1,6 @@
 /* 
 When narrowing types with functions or classes or anything can be narrowed using the 'new' keyword, 
-utilizing the operator 'instanceof' to check if the variable type is that particular class. function
+utilize the operator 'instanceof' to check if the variable type is that particular class. function
 etc
 */
 
@@ -94,7 +94,10 @@ interface Rectangle {
   width: number,
 }
 
+// union typing of two interfaces
 type Shape = Circle | Square;
+
+/* You can use interface properties to narrow down whether shape is a interface of Circle or Square */
 
 function getTrueShape(shape: Shape) {
   if(shape.kind === 'circle') {
@@ -118,3 +121,5 @@ function getArea(shape: NewShape) {
       return _defaultShape;
   }
 }
+
+export {};

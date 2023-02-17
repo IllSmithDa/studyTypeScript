@@ -2,7 +2,7 @@
   You can of course use classes with typescript
 */
 
-// this is the classic js class with type added to it
+// this is the classic js class with no types added to it
 /*
 class User {
   constructor(email, name:) {
@@ -14,8 +14,8 @@ class User {
 */
 
 /* 
-  You can take the same class and now add types to it. Strangely enough, you don't do this by 
-  adding it the constructor but at the top of the class scope and in the constructor parameter
+  You can take the same class and now add types to it. Strangely enough, you don't type it 
+  constructor function itself but either  at the top of the class and in the constructor parameter
 */
 
 class User {
@@ -26,6 +26,7 @@ class User {
   // only accessed via setter and getter methods in the same class and not child classes 
   // use protected instead for wanting to share with child classes
   private readonly medicalID: string;
+
   constructor(email: string, name: string) {
     this.email = email;
     this.name = name;
@@ -34,12 +35,12 @@ class User {
 
 // instance of the class User
 const newUser = new User('sam@sam.com', 'Sam');
-console.log(newUser.city) // will return sf
+console.log(newUser.city) // will return AF
 newUser.city = 'NY' // redefine to ny
 // newUser.city = 3; produce error as it is a type string 
 
 /* 
-  note that private props cannot be access from outside the class but only in the class
+  Note that private props cannot be access from outside the class but only in the class
   In standard js, you can add # infront of prop name to make it private
 */
 
@@ -115,7 +116,7 @@ class AndroidApp extends App {
     isLawCompliant: boolean = true;
     changeUserCount() {
       this.userCount = 4;
-      // produce error because it is a private var not a protected or public one
+      // produce error because it is a private var that already exists in the parent class and it iss not a protected or public one
       // this.currentYear = 2022
     }
 }

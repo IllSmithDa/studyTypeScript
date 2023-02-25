@@ -10,7 +10,7 @@ const user: (number | string)[] = [2, 'dog'];
   Tuple ensures the strictness of not just what is in an array but also the ordering of the data 
   in the array. You also are not allowed to add anything outside of the given types in the bracket
   in the definition. But you can still push and pull items in the array. 
-  */
+*/
 const newUsers: [string, number, boolean] = ['dog', 2, true];
 
 /* 

@@ -165,3 +165,5 @@ class Stories implements TakePhoto, Story, Youtube {
 
   }
 }
+
+export {};

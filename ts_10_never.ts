@@ -40,8 +40,10 @@ function getArea(shape: NewShape) {
   }
 }
 
-/* error goes away once we account for rectangle and so we should include this never type 
-  when using switch statements */
+/* 
+  error goes away once we account for rectangle and so we should include this never type 
+  when using switch statements 
+*/
 function getArea2(shape: NewShape) {
   switch(shape.kind) {
     case 'circle':

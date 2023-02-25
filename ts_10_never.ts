@@ -35,8 +35,8 @@ function getArea(shape: NewShape) {
     default: 
       // error because its possible that type Rectangle is not covered under this switch statement
       // create a case for Rectangle and this error will go away 
-      const _defaultShape: never = shape
-      return _defaultShape;
+      // const _defaultShape: never = shape
+      // return _defaultShape;
   }
 }
 
